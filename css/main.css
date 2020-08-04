@@ -63,8 +63,9 @@ ul {
   color: var(--white-sl);
   letter-spacing: 3px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 12px;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .burger {
