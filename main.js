@@ -43,7 +43,7 @@ const autoCompleteConfig = {
 
     async fetchData(searchTerm) {
         //only the api url is passed with the help of axios.
-        const response = await axios.get("http://www.omdbapi.com/", {
+        const response = await axios.get("https://www.omdbapi.com/", {
             //api params is used to add the api key to the url.
             params: {
                 //apikey is always small letters.
@@ -70,7 +70,7 @@ createAutoComplete({
 let leftMovie;
 
 const onMovieSelect = async (movie, summaryElement, side) => {
-    const response = await axios.get("http://www.omdbapi.com/", {
+    const response = await axios.get("https://www.omdbapi.com/", {
         //api params is used to add the api key to the url.
         params: {
             //apikey is always small letters.
