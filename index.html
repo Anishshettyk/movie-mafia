@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie mafia</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css"
+    />
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -21,7 +26,7 @@
   </head>
 
   <body>
-    <nav class="main-nav">
+    <nav class="main-nav fixed-top">
       <div class="logo">
         <h4>
           <i class="fas fa-film"></i><span>Movie <strong>mafia!</strong></span>
@@ -73,79 +78,27 @@
           Information about every movie in the world.
         </h5>
         <div class="d-flex">
-          <a href="#search" class="btn-get-started">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Get Started</a
-          >
+          <a href="#search" class="btn-get-started"> Get Started</a>
         </div>
       </div>
     </section>
     <!-- End Hero -->
 
-    <section id="search"></section>
+    <section id="search">
+      <div class="container">
+        <div class="columns">
+          <div class="column boxer">
+            <div id="left-autocomplete"></div>
+            <div id="left-summary"></div>
+          </div>
+        </div>
 
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro, nesciunt?
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam officiis
-      voluptatem temporibus tempora fuga, tenetur, sint minus voluptatum
-      reprehenderit voluptas qui vel, rerum doloribus sed commodi aliquid ipsa
-      corporis odio architecto totam eligendi repellat obcaecati! Debitis
-      reiciendis rerum nesciunt voluptatem? Nostrum cum modi dolorem ducimus
-      iste hic rem quis reprehenderit! Necessitatibus voluptate alias rem vitae
-      animi quasi tempora aperiam distinctio, cumque cupiditate autem impedit
-      nemo voluptatem, minima eveniet numquam. Nostrum voluptatum itaque officia
-      deleniti. Similique at est eius. Possimus sed inventore natus ratione
-      labore accusantium fuga, ipsum minus mollitia incidunt atque aperiam odit
-      nisi cum tempora voluptatem odio obcaecati provident blanditiis? Esse
-      consequatur et quibusdam incidunt ipsum nobis, quisquam ad temporibus enim
-      iure asperiores voluptatibus totam possimus doloribus eligendi. Maiores
-      illum nam culpa rem suscipit alias deleniti facere expedita ipsum
-      recusandae, eaque neque vel optio nesciunt veritatis sapiente. Nam iusto
-      nisi ratione laudantium excepturi reprehenderit maiores rerum deserunt?
-      Suscipit deleniti inventore nemo animi, voluptas ullam eligendi similique
-      tempora voluptatem aut, aliquam, voluptatum quam consequatur quo laborum
-      nesciunt rem quas vel. Necessitatibus non praesentium quibusdam sit illum!
-      Beatae esse nemo consectetur alias officiis impedit? Ullam voluptate illum
-      saepe eligendi, ab minima quo quos enim autem pariatur. Nobis voluptates
-      tempore ut optio reiciendis praesentium vitae minus soluta, magni quo
-      possimus illum voluptate similique sunt quas doloribus totam pariatur eos
-      illo, quam magnam, alias itaque excepturi? Maiores libero architecto et
-      iusto vero nulla repellendus asperiores dolore sed earum repellat
-      distinctio alias nemo deserunt quo dolorum similique totam dolores enim
-      deleniti, in incidunt ex velit. Velit odio dolorem dolor ex beatae
-      eligendi nulla quis molestias rerum. Odio odit incidunt eveniet iste eaque
-      ab dicta commodi distinctio tempore nobis doloremque aspernatur voluptates
-      amet nesciunt reiciendis aliquam maxime, ducimus recusandae voluptas et?
-      Quidem dolor corrupti hic repudiandae inventore soluta, ratione magni.
-      Modi debitis aperiam quibusdam, eum qui maiores eos sapiente aliquid hic
-      magni, nemo nesciunt ipsam dicta totam exercitationem itaque ab dolore
-      dolorum eaque? Voluptatum dolor molestiae unde repellat ratione suscipit
-      nesciunt illo voluptas quaerat. Quod, maxime veritatis. A nisi quaerat
-      assumenda voluptatibus repellendus. Labore, cupiditate! Incidunt et
-      tempora aspernatur nesciunt, aliquid culpa non reprehenderit officiis a
-      saepe tempore nemo rem dolor sint sed necessitatibus voluptatibus quasi.
-      Tenetur perspiciatis cumque in beatae laborum deleniti asperiores labore
-      voluptatibus adipisci maiores, eos assumenda earum neque quidem sunt velit
-      placeat odio nisi blanditiis provident minus quis aperiam ad. Optio
-      quisquam accusantium, facilis dignissimos nemo eligendi accusamus
-      explicabo fugiat hic nisi distinctio molestiae voluptatem officia quidem
-      magnam quia provident saepe! Dolore, ducimus doloremque minima soluta
-      quos, obcaecati illum maiores dignissimos maxime rerum nulla illo libero
-      sed. Corrupti, ut! Esse mollitia pariatur placeat! Eaque inventore facilis
-      dolor commodi doloremque molestias harum aut nemo error nam officiis
-      blanditiis aperiam est non natus eos, dolore minus unde provident,
-      excepturi magnam quos. Tempora eligendi fugit ipsa quibusdam vel corporis
-      ab earum officiis beatae, nisi et totam ipsam! Magnam accusamus aspernatur
-      mollitia animi, error ipsa reiciendis perspiciatis, tempora facere
-      accusantium iusto asperiores expedita tenetur harum ea officiis totam.
-      Fuga, reiciendis reprehenderit! Reprehenderit eligendi voluptatem
-      voluptates.
-    </p>
+        <div class="column is-half notification is-primary tutorial">
+          <h1 class="title">search for a movie in both sides</h1>
+          <p>anish shetty k all in one two three four</p>
+        </div>
+      </div>
+    </section>
 
     <!-- assets -->
     <script
@@ -163,7 +116,8 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
-
+    <script src="./utils.js"></script>
+    <script src="./autocomplete.js"></script>
     <script src="./main.js"></script>
   </body>
 </html>

@@ -1,6 +1,7 @@
 :root {
   --black: #000000;
   --black-sl: #323232;
+  --black-box: #726e6e;
   --pink: #ff1e56;
   --yellow: #ffac41;
   --white: #fff;
@@ -19,6 +20,7 @@
 
 body {
   overflow-x: hidden;
+  background: var(--white-sl);
 }
 
 nav {
@@ -123,8 +125,9 @@ ul {
     overflow: hidden;
     opacity: 0;
     display: none;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom: 10px solid var(--pink);
   }
 
   .nav-links li {
@@ -202,8 +205,15 @@ ul {
 #hero {
   z-index: 1;
   width: 100%;
-  height: 100vh;
-  background: url("../img/hero\ bg.jpg") bottom center;
+  height: 80vh;
+  background: #2980b9;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2c3e50, #2980b9);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2c3e50, #2980b9);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
   background-size: cover;
   position: relative;
   padding: 0;
@@ -217,7 +227,7 @@ ul {
   top: 0;
   left: 0;
   right: 0;
-  opacity: 0.6;
+  opacity: 0.4;
 }
 
 #hero .hero-container {
@@ -302,4 +312,71 @@ ul {
     line-height: 24px;
     margin-bottom: 30px;
   }
+}
+
+/*main part*/
+.tutorial {
+  width: 600px;
+  text-align: center;
+  margin: auto;
+  border-radius: 10px;
+}
+
+figure.image {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+
+figure .image img {
+  width: 128px;
+}
+
+.notification {
+  margin-top: 20px !important;
+}
+
+.results {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.title .icon {
+  margin-left: 15px;
+}
+
+.hero {
+  margin-bottom: 20px;
+}
+
+.forms {
+  display: flex;
+  justify-content: space-around;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.dropdown-item img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.content h1 {
+  color: var(--yellow);
+}
+
+.boxer {
+  margin: 70px;
+  -webkit-box-shadow: 0px 0px 20px 1px var(var(--black-box));
+  -moz-box-shadow: 0px 0px 20px 1px var(--black-box);
+  box-shadow: 0px 0px 20px 1px var(--black-box);
+}
+
+.input-label {
+  text-align: center;
+  color: var(--white-sl);
 }
